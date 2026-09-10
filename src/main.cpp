@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <iterator>
 #include <vector>
+#include <numeric>
 
 std::array<std::string, 9> codeExtensions = {
     ".py", ".cpp", ".hpp",
@@ -86,6 +87,13 @@ int main() {
         std::cout << std::left << std::setw(static_cast<int>(fileWidth) + 2) << name
                   << std::right << std::setw(static_cast<int>(lineWidth)) << lines << "\n";
     }
+    size_t totalLines = 0;
+
+    for (const auto& pair : results) {
+        totalLines += pair.second;
+    }
+
+    std::cout << "\nFiles: " << results.size() << ", Total lines: " << totalLines << "\n";
 
     return 0;
 }
