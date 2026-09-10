@@ -8,6 +8,7 @@
 #include <iterator>
 #include <vector>
 #include <numeric>
+#include <iomanip>
 
 std::array<std::string, 9> codeExtensions = {
     ".py", ".cpp", ".hpp",
