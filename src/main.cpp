@@ -10,14 +10,15 @@
 #include <numeric>
 #include <iomanip>
 
-std::array<std::string, 9> codeExtensions = {
+std::array<std::string, 10> codeExtensions = {
     ".py", ".cpp", ".hpp",
     ".h", ".c", ".js",
     ".ts", ".go", ".cs",
+    ".rs",
 };
 
 std::unordered_set<std::string> ignoredDirs = {
-    "build", "node_modules", "__pycache__"
+    "build", "node_modules", "__pycache__", "target"
 };
 
 size_t lineCount(std::string path) {
