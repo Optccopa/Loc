@@ -34,7 +34,7 @@ jobs:
       - run: >
           cmake -S . -B build -A x64
 
-      - run: cmake --build build --config Release --parallel
+      - run: cmake --build build --config Release
 
       - name: Collect, hash, release
         run: |
